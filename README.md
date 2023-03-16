@@ -1,1 +1,1 @@
-# rs-school-react
+# This is first module - React Components
