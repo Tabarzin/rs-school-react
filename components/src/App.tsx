@@ -14,14 +14,13 @@ class App extends React.Component {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="search" element={<SearchBar />} />
-          <Route path="404" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <div>
-          <h1>This is the home page</h1>
+        <>
           <Link to="about">Click to view our about page</Link>
           <Link to="search">Click to view our search page</Link>
           <Link to="404">Click to view our 404 page</Link>
-        </div>
+        </>
       </div>
     );
   }
