@@ -1,4 +1,5 @@
 import React from 'react';
+import { DebounceInput } from 'react-debounce-input';
 
 class SearchBar extends React.Component {
   constructor(props: string) {
@@ -7,14 +8,21 @@ class SearchBar extends React.Component {
     this.state = { term: '' };
   }
 
-  onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  onInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    console.log(this.state);
     this.setState({ term: e.target.value });
   };
 
   render() {
     return (
       <div className="search-bar">
-        <input value={this.state.term} onChange={this.onInputChange} />
+        <DebounceInput
+          minLength={2}
+          debounceTimeout={300}
+          value={this.state.term}
+          type="text"
+          onChange={this.onInputChange}
+        />
       </div>
     );
   }
