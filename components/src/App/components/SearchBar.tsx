@@ -15,14 +15,19 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar">
-        <DebounceInput
-          minLength={2}
-          debounceTimeout={300}
-          value={this.state.term}
-          type="text"
-          onChange={this.onInputChange}
-        />
+      <div className="ui search">
+        <div className="ui icon input ">
+          <DebounceInput
+            className="prompt "
+            type="text"
+            placeholder="Search cards..."
+            minLength={2}
+            debounceTimeout={300}
+            value={this.state.term}
+            onChange={this.onInputChange}
+          />
+          <i className="search icon"></i>
+        </div>
       </div>
     );
   }
