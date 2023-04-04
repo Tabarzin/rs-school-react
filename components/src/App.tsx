@@ -3,6 +3,7 @@ import { ReactDOM } from 'react';
 import SearchBar from './App/components/SearchBar';
 import AboutUs from './App/components/AboutUs';
 import NotFound from './App/components/NotFound';
+import Cards from './App/components/Cards';
 
 import { Routes, Route, Link } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ class App extends React.Component {
 
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Cards />
       </div>
     );
   }
