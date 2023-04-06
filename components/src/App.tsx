@@ -4,6 +4,7 @@ import SearchBar from './App/components/SearchBar';
 import AboutUs from './App/components/AboutUs';
 import NotFound from './App/components/NotFound';
 import Cards from './App/components/Cards';
+import Home from './App/components/Home';
 
 import { Routes, Route, Link } from 'react-router-dom';
 
@@ -20,12 +21,10 @@ class App extends React.Component {
           </Link>
         </div>
         <Routes>
-          <Route path="/" element={<SearchBar />} />
+          <Route path="/" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Cards />
       </div>
     );
   }

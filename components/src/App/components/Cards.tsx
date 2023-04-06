@@ -13,9 +13,28 @@ interface Card {
 class Cards extends React.Component {
   dataObj = [...data];
 
+  renderedData = this.dataObj.map((card) => {
+    console.log(card);
+    return (
+      <div className="four wide column">
+        <div key={card.id} className="ui card ">
+          <div className="content">
+            <span className="header">
+              {card.firstname + ' '}
+              {card.lastname}
+            </span>
+            <div className="ui list">
+              <div className="item">age : {card.age}</div>
+              <div className="item"> city : {card.city} </div>
+              <div className="item"> country : {card.country}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  });
   render() {
-    console.log('DataObj', this.dataObj);
-    return <h2>Cards</h2>;
+    return <div className="ui grid container">{this.renderedData}</div>;
   }
 }
 
