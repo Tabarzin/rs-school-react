@@ -5,17 +5,35 @@ class SearchBar extends React.Component {
   constructor(props: string) {
     super(props);
 
-    this.state = { term: '' };
+    this.state = {
+      term: localStorage.getItem('local'),
+    };
   }
 
   onInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    console.log(this.state);
     this.setState({ term: e.target.value });
   };
 
+  componentDidMount() {
+    console.log('MOUNTED');
+  }
+
+  componentDidUpdate() {
+    if (this.state.term === '') {
+      localStorage.clear();
+    } else {
+      localStorage.setItem('local', JSON.stringify(this.state.term));
+    }
+  }
+
+  // componentWillUnmount() {
+  //   console.log('UNMOUNT');
+  //   localStorage.setItem('local', JSON.stringify(this.state.term));
+  // }
+
   render() {
     return (
-      <div className="ui search">
+      <div className="ui search-bar segment">
         <div className="ui icon input ">
           <DebounceInput
             className="prompt "

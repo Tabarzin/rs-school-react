@@ -14,10 +14,10 @@ class Cards extends React.Component {
   dataObj = [...data];
 
   renderedData = this.dataObj.map((card) => {
-    console.log(card);
+    // console.log(card);
     return (
-      <div className="four wide column">
-        <div key={card.id} className="ui card ">
+      <div key={card.id} className="four wide column ">
+        <div className="ui card ">
           <div className="content">
             <span className="header">
               {card.firstname + ' '}
