@@ -7,11 +7,14 @@
 - подключил semantic ui и оформил компоненты;
 - добавил local storage.
 
-# It is a RS School task on React Components
 
-# Resctriction: Use class components to get access to lifecycle events or state. Using hooks is forbidden at this stage.
+English:
 
-# Input value should be saved to LocalStorage during component’s unmount. During the initialization pick the value from LocalStorage and show it.
+ It is a RS School task on React Components
+
+ Resctriction: Use class components to get access to lifecycle events or state. Using hooks is forbidden at this stage.
+
+ Input value should be saved to LocalStorage during component’s unmount. During the initialization pick the value from LocalStorage and show it.
 
 What was done:
 
